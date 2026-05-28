@@ -1,0 +1,114 @@
+/* ===================================================
+   CONTENT SHELF — Netflix Horizontal Row
+   =================================================== */
+
+.shelf {
+  padding: var(--space-xl) 0;
+  position: relative;
+}
+
+.shelf__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--shelf-padding);
+  margin-bottom: var(--space-lg);
+}
+
+.shelf__title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--nf-white-bright);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.shelf__title-accent {
+  width: 4px;
+  height: 24px;
+  background: var(--nf-red);
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.shelf__subtitle {
+  font-size: 0.85rem;
+  color: var(--nf-muted);
+  font-weight: 400;
+}
+
+/* Scroll Container */
+.shelf__scroll-wrapper {
+  position: relative;
+}
+
+.shelf__row {
+  display: flex;
+  gap: var(--space-md);
+  overflow-x: auto;
+  overflow-y: visible;
+  padding: var(--space-md) var(--shelf-padding);
+  padding-bottom: var(--space-xl);
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.shelf__row::-webkit-scrollbar {
+  display: none;
+}
+
+/* Scroll Arrows */
+.shelf__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 44px;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 20, 20, 0.7);
+  border: none;
+  color: var(--nf-white-bright);
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.shelf__scroll-wrapper:hover .shelf__arrow {
+  opacity: 1;
+}
+
+.shelf__arrow:hover {
+  background: rgba(20, 20, 20, 0.9);
+}
+
+.shelf__arrow--left {
+  left: 0;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.shelf__arrow--right {
+  right: 0;
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .shelf__title {
+    font-size: 1.15rem;
+  }
+
+  .shelf__arrow {
+    display: none;
+  }
+
+  .shelf__row {
+    gap: var(--space-sm);
+    padding-bottom: var(--space-lg);
+  }
+}

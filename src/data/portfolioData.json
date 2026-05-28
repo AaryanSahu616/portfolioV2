@@ -1,0 +1,134 @@
+{
+  "profile": {
+    "name": "Aaryan Sahu",
+    "title": "Software Developer",
+    "summary": "Detail-oriented software developer with expertise in Django, Flask, and API integration. Proven ability to deliver innovative web applications and enhance user experiences.",
+    "email": "aaryansahu4974@gmail.com",
+    "phone": "+919868036447",
+    "location": "Ghaziabad 201009",
+    "linkedin": "https://www.linkedin.com/in/aaryan-sahu-a43a8a277/",
+    "linkedinHandle": "aaryan-sahu",
+    "github": "https://github.com/aaryan-sahu",
+    "githubHandle": "aaryan-sahu"
+  },
+  "skills": {
+    "frontend": [
+      { "name": "React.js", "level": 85, "icon": "⚛️" },
+      { "name": "HTML / CSS", "level": 90, "icon": "🌐" },
+      { "name": "JavaScript", "level": 85, "icon": "📜" },
+      { "name": "Django Templates", "level": 80, "icon": "📄" },
+      { "name": "Pygame", "level": 75, "icon": "🎮" }
+    ],
+    "backend": [
+      { "name": "Python", "level": 95, "icon": "🐍" },
+      { "name": "Django / DRF", "level": 90, "icon": "🎯" },
+      { "name": "Flask", "level": 85, "icon": "🧪" },
+      { "name": "C++", "level": 80, "icon": "⚡" },
+      { "name": "SQL (MySQL/PostgreSQL)", "level": 85, "icon": "🗄️" },
+      { "name": "MongoDB", "level": 75, "icon": "🍃" }
+    ],
+    "tools": [
+      { "name": "Problem Solving", "icon": "🧩" },
+      { "name": "API Integration", "icon": "🔗" },
+      { "name": "Team Collaboration", "icon": "🤝" },
+      { "name": "Time Management", "icon": "⏱️" },
+      { "name": "Attention to Detail", "icon": "🔍" },
+      { "name": "Git / GitHub", "icon": "🌿" },
+      { "name": "VS Code", "icon": "💻" },
+      { "name": "Debugging", "icon": "🐛" }
+    ]
+  },
+  "experience": [
+    {
+      "id": 1,
+      "role": "Software Developer",
+      "company": "Sathee @ IITK",
+      "period": "Jul 2025 — Present",
+      "type": "Full-Time",
+      "achievements": [
+        "Developed a Django Rest Framework job hosting platform for companies and job seekers.",
+        "Built a Flask web app for remote OBS Studio control via web sockets.",
+        "Integrated APIs and migrated systems from Node.js to Django."
+      ],
+      "tags": ["Django", "Flask", "REST API", "Web Sockets"]
+    },
+    {
+      "id": 2,
+      "role": "Software Developer Intern",
+      "company": "Sathee @ IITK",
+      "period": "Jul 2024 — Jun 2025",
+      "type": "Internship",
+      "achievements": [
+        "Developed Employee Management Software with task status tracking.",
+        "Integrated Monaco editor, markdown previewer, and LLM APIs."
+      ],
+      "tags": ["Django", "Monaco Editor", "LLM APIs"]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Handwritten Text Recognition",
+      "description": "Python project using Tesseract OCR and OpenCV to read and recognize text from handwritten notes, converting them to digital text format.",
+      "tech": ["Python", "Tesseract OCR", "OpenCV"],
+      "category": "AI / ML",
+      "color": "#00D4FF"
+    },
+    {
+      "id": 2,
+      "title": "Chain Reaction CLI",
+      "description": "Multiplayer puzzle game — a command-line prototype of Chain Reaction built entirely in Python.",
+      "tech": ["Python", "CLI", "Game Logic"],
+      "category": "Game Dev",
+      "color": "#FF003C"
+    },
+    {
+      "id": 3,
+      "title": "JobMela",
+      "description": "Job hosting & searching platform built with Django backend and REST framework. Created during internship at Sathee@IITK.",
+      "tech": ["Django", "DRF", "Python", "PostgreSQL"],
+      "category": "Web App",
+      "color": "#FFAA00"
+    },
+    {
+      "id": 4,
+      "title": "Flappy Bird Clone",
+      "description": "A faithful Flappy Bird clone developed using Python's PyGame library with physics simulation and score tracking.",
+      "tech": ["Python", "PyGame"],
+      "category": "Game Dev",
+      "color": "#00FF66"
+    },
+    {
+      "id": 5,
+      "title": "Remote OBS Controller",
+      "description": "Web application to control multiple OBS Studio instances remotely — managing recording, scenes, and sources via web sockets.",
+      "tech": ["Python", "Flask", "OBS Web-Sockets"],
+      "category": "Dev Tools",
+      "color": "#7B61FF"
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "degree": "B.Tech (CS & AI)",
+      "institution": "APJ Abdul Kalam Technical University",
+      "period": "Oct 2021 — Jun 2025",
+      "icon": "🎓"
+    },
+    {
+      "id": 2,
+      "degree": "12th Class (CBSE)",
+      "institution": "Rukmani Devi Jaipuria Public School",
+      "period": "Jun 2021",
+      "icon": "📚"
+    },
+    {
+      "id": 3,
+      "degree": "10th Class (CBSE)",
+      "institution": "Rukmani Devi Jaipuria Public School",
+      "period": "Jun 2019",
+      "icon": "📖"
+    }
+  ],
+  "hobbies": ["Board Gaming", "Story Writing", "Watching Movies", "8 Ball Pool"]
+}

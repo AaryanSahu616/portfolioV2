@@ -1,0 +1,382 @@
+/* ===================================================
+   TILE CARDS — Netflix Content Tiles
+   =================================================== */
+
+/* ---- Shared Tile Base ---- */
+.tile {
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  background: var(--nf-dark);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform var(--transition-slow), box-shadow var(--transition-slow);
+  position: relative;
+}
+
+.tile:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-card-hover);
+  z-index: 5;
+}
+
+/* ---- Skill Tile ---- */
+.tile--skill {
+  width: 200px;
+  min-height: 120px;
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--nf-gray);
+  transition: transform var(--transition-slow), box-shadow var(--transition-slow), border-color var(--transition-slow);
+}
+
+.tile--skill:hover {
+  border-color: var(--nf-red);
+}
+
+.tile__skill-icon {
+  font-size: 1.8rem;
+  margin-bottom: var(--space-sm);
+}
+
+.tile__skill-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--nf-white-bright);
+  margin-bottom: var(--space-sm);
+}
+
+.tile__skill-bar-track {
+  width: 100%;
+  height: 4px;
+  background: var(--nf-gray);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.tile__skill-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--nf-red) 0%, var(--nf-red-hover) 100%);
+  border-radius: 2px;
+  transition: width 1s ease-out;
+}
+
+.tile__skill-level {
+  font-size: 0.7rem;
+  color: var(--nf-muted);
+  margin-top: var(--space-xs);
+  text-align: right;
+}
+
+/* ---- Tool Tile ---- */
+.tile--tool {
+  width: 160px;
+  min-height: 90px;
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid var(--nf-gray);
+  gap: var(--space-sm);
+}
+
+.tile--tool:hover {
+  border-color: var(--accent-purple);
+  background: rgba(123, 97, 255, 0.08);
+}
+
+.tile__tool-icon {
+  font-size: 1.6rem;
+}
+
+.tile__tool-name {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--nf-white);
+}
+
+/* ---- Project Tile ---- */
+.tile--project {
+  width: 320px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--nf-gray);
+  overflow: hidden;
+}
+
+.tile--project:hover {
+  border-color: transparent;
+}
+
+.tile__project-banner {
+  width: 100%;
+  height: 140px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.tile__project-banner-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.15;
+  transition: opacity var(--transition-base);
+}
+
+.tile--project:hover .tile__project-banner-bg {
+  opacity: 0.25;
+}
+
+.tile__project-category {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--nf-white);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+.tile__project-icon {
+  font-size: 3rem;
+  z-index: 1;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+}
+
+.tile__project-body {
+  padding: var(--space-md) var(--space-lg);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tile__project-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--nf-white-bright);
+  margin-bottom: var(--space-sm);
+}
+
+.tile__project-desc {
+  font-size: 0.8rem;
+  color: var(--nf-muted);
+  line-height: 1.5;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tile__project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-top: var(--space-md);
+}
+
+.tile__project-tag {
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--nf-white);
+  background: var(--nf-gray);
+  padding: 3px 8px;
+  border-radius: 3px;
+  letter-spacing: 0.5px;
+}
+
+/* ---- Experience Tile ---- */
+.tile--experience {
+  width: 380px;
+  min-height: 220px;
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--nf-gray);
+  position: relative;
+  overflow: hidden;
+}
+
+.tile--experience::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--nf-red);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.tile--experience:hover::before {
+  opacity: 1;
+}
+
+.tile__exp-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+}
+
+.tile__exp-role {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--nf-white-bright);
+}
+
+.tile__exp-company {
+  font-size: 0.85rem;
+  color: var(--nf-red);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.tile__exp-type {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--nf-muted);
+  background: var(--nf-gray);
+  padding: 3px 10px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.tile__exp-period {
+  font-size: 0.8rem;
+  color: var(--nf-muted);
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.tile__exp-achievements {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.tile__exp-achievement {
+  font-size: 0.8rem;
+  color: var(--nf-white);
+  line-height: 1.6;
+  padding-left: var(--space-md);
+  position: relative;
+  margin-bottom: var(--space-xs);
+}
+
+.tile__exp-achievement::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--nf-red);
+  font-weight: 700;
+}
+
+.tile__exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-top: var(--space-md);
+}
+
+.tile__exp-tag {
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--nf-red);
+  border: 1px solid rgba(229, 9, 20, 0.3);
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+
+/* ---- Education Tile ---- */
+.tile--education {
+  width: 280px;
+  min-height: 160px;
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid var(--nf-gray);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.tile--education:hover {
+  border-color: var(--accent-yellow);
+}
+
+.tile__edu-icon {
+  font-size: 2.2rem;
+  margin-bottom: var(--space-md);
+}
+
+.tile__edu-degree {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--nf-white-bright);
+  margin-bottom: var(--space-xs);
+}
+
+.tile__edu-institution {
+  font-size: 0.8rem;
+  color: var(--nf-muted);
+  line-height: 1.4;
+  margin-bottom: var(--space-sm);
+}
+
+.tile__edu-period {
+  font-size: 0.75rem;
+  color: var(--nf-red);
+  font-weight: 600;
+}
+
+/* ---- Hobby Tile ---- */
+.tile--hobby {
+  width: 170px;
+  min-height: 100px;
+  padding: var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--nf-gray);
+  text-align: center;
+}
+
+.tile--hobby:hover {
+  border-color: var(--accent-green);
+  background: rgba(0, 255, 102, 0.05);
+}
+
+.tile__hobby-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--nf-white);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tile--skill { width: 170px; min-height: 100px; padding: var(--space-md); }
+  .tile--tool { width: 140px; min-height: 80px; }
+  .tile--project { width: 270px; min-height: 240px; }
+  .tile--experience { width: 320px; min-height: 200px; padding: var(--space-lg); }
+  .tile--education { width: 240px; min-height: 140px; padding: var(--space-lg); }
+  .tile--hobby { width: 150px; }
+}
